@@ -28,11 +28,11 @@ for i in range(100): #Enter the number of times to reload the network-page
     if i!=0:
         browser.refresh()
     time.sleep(3)
-    connections=browser.find_elements_by_class_name('button-secondary-small')
+    connections=browser.find_elements_by_class_name('artdeco-button__text')
     for i in connections:
         if i.is_displayed():
             time.sleep(random.randint(2,3))
-            i.send_keys(Keys.SPACE)
+            i.click()
             cnt+=1
             print(cnt) #Prints done for each connection made
     
